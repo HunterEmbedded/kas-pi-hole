@@ -1,0 +1,41 @@
+header:
+  version: 13
+
+distro: poky
+
+repos:
+  poky:
+    url: http://git.yoctoproject.org/poky
+    branch: scarthgap
+    layers:
+      meta:
+      meta-poky:
+      meta-yocto-bsp:
+
+  meta-open-embedded:
+    url: https://git.openembedded.org/meta-openembedded
+    branch: scarthgap
+    layers:
+      meta-oe:
+      meta-networking:
+      meta-multimedia:
+      meta-python:
+
+  meta-hunter-embedded:
+    url: http://10.159.1.201:32769/root/meta-hunter-embedded
+    branch: scarthgap
+
+
+local_conf_header:
+  base: |
+    CONF_VERSION = "2"
+    INIT_MANAGER = "systemd"
+
+  configuration: |
+    INHERIT:remove = "create-spdx"
+    PACKAGE_CLASSES = "package_deb"
+
+target:
+  - core-image-minimal
+
+

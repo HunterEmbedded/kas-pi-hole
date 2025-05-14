@@ -1,0 +1,24 @@
+header:
+  version: 13
+  includes:
+    - poky.yaml
+
+machine: raspberrypi4
+
+repos:
+  meta-raspberrypi:
+    url: http://git.yoctoproject.org/meta-raspberrypi
+    branch: scarthgap
+  
+
+local_conf_header:
+  rpi4: |
+      # allows serial terminal 
+      ENABLE_UART = "1"
+  licenses: |
+      # this is required to pull in cypress wifi code
+      LICENSE_FLAGS_ACCEPTED = "synaptics-killswitch"
+  debug: |
+      # this allows login with passwordless root user
+      EXTRA_IMAGE_FEATURES = "debug-tweaks"
+

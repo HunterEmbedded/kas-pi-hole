@@ -5,12 +5,12 @@ The build takes place in a KAS container running within a virtualenv
 
 On a clean ubuntu 22.04LTS minimal image python3 is installed by default.
 
-##Initialisation of build machine
+## Initialisation of build machine
 
 Install docker following instrctions at https://docs.docker.com/engine/install/ubuntu/ including the reboot after adding ${USER} to docker group.
 
 
-##Install other packages
+## Install other packages
 
 ```
 sudo apt-get install git python3-pip python3-virtualenv
@@ -40,7 +40,7 @@ Now create the kas container with the rpi4 yocto configuration
 kas-container shell kas/rpi4.yaml
 ```
 
-##Subsequent builds only need
+## Subsequent builds only need
 
 ```
 cd pi-hole-kas

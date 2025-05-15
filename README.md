@@ -44,7 +44,7 @@ kas-container shell kas/rpi4.yaml
 
 ```
 cd pi-hole-kas
-source pi-hold-build/bin/activate
+source pi-hole-build/bin/activate
 kas-container shell kas/rpi4.yaml
 ```
 

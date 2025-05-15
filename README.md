@@ -25,11 +25,11 @@ cd pi-hole-kas
 
 Install virtualenv and call it pi-hole-build
 ```
-virtualenv pi-hold-build
+virtualenv pi-hole-build
 ```
 and activate it.
 ```
-source pi-hold-build/bin/activate
+source pi-hole-build/bin/activate
 ```
 and install kas
 ```

@@ -1,7 +1,7 @@
 header:
   version: 13
 
-distro: poky
+distro: pihole
 
 repos:
   poky:

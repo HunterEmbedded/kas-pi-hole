@@ -6,6 +6,7 @@ distro: pihole
 repos:
   poky:
     url: http://git.yoctoproject.org/poky
+    path: sources/poky
     branch: scarthgap
     layers:
       meta:
@@ -14,6 +15,7 @@ repos:
 
   meta-open-embedded:
     url: https://git.openembedded.org/meta-openembedded
+    path: sources/meta-openembedded
     branch: scarthgap
     layers:
       meta-oe:
@@ -23,8 +25,13 @@ repos:
 
   meta-hunter-embedded:
     url: http://10.159.1.201:32769/root/meta-hunter-embedded
+    path: sources/meta-hunter-embedded
     branch: scarthgap
 
+  meta-rauc:
+    url: https://github.com/rauc/meta-rauc
+    branch: scarthgap
+    path: sources/meta-rauc
 
 local_conf_header:
   base: |

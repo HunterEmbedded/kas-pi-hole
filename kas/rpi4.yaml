@@ -1,7 +1,7 @@
 header:
   version: 13
   includes:
-    - poky.yaml
+    - pihole.yaml
 
 machine: raspberrypi4
 
@@ -10,6 +10,12 @@ repos:
     url: http://git.yoctoproject.org/meta-raspberrypi
     branch: scarthgap
   
+  meta-rauc-community:
+    url: http://github.com/rauc/meta-rauc-community
+    branch: scarthgap
+    path: sources/meta-rauc-community
+    layers:
+      meta-rauc-raspberrypi:
 
 local_conf_header:
   rpi4: |

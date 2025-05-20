@@ -9,6 +9,7 @@ repos:
   meta-raspberrypi:
     url: http://git.yoctoproject.org/meta-raspberrypi
     branch: scarthgap
+    path: sources/meta-raspberrypi
   
   meta-rauc-community:
     url: http://github.com/rauc/meta-rauc-community

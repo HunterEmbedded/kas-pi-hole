@@ -28,4 +28,8 @@ local_conf_header:
   debug: |
       # this allows login with passwordless root user
       EXTRA_IMAGE_FEATURES = "debug-tweaks"
+  bbmasks: |
+      # replaced by meta-hunterembedded version 
+      BBMASK:append = " meta-rauc-community/meta-rauc-raspberrypi/recipes-core/base-files/base-files_%.bbappend"
+
 

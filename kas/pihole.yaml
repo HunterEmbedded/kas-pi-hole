@@ -24,7 +24,7 @@ repos:
       meta-python:
 
   meta-hunter-embedded:
-    url: http://10.159.1.201:32769/root/meta-hunter-embedded
+    url: https://github.com/HunterEmbedded/meta-hunterembedded.git
     path: sources/meta-hunter-embedded
     branch: scarthgap-pi-hole-6.0.6
 

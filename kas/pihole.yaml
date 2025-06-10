@@ -7,7 +7,7 @@ repos:
   poky:
     url: http://git.yoctoproject.org/poky
     path: sources/poky
-    branch: scarthgap
+    commit: fa7bc4c1a8e1e59d57e6deeaf74f7784975ab9b4
     layers:
       meta:
       meta-poky:
@@ -16,7 +16,7 @@ repos:
   meta-open-embedded:
     url: https://git.openembedded.org/meta-openembedded
     path: sources/meta-openembedded
-    branch: scarthgap
+    commit: e92d0173a80ea7592c866618ef5293203c50544c
     layers:
       meta-oe:
       meta-networking:
@@ -26,11 +26,11 @@ repos:
   meta-hunter-embedded:
     url: http://10.159.1.201:32769/root/meta-hunter-embedded
     path: sources/meta-hunter-embedded
-    branch: scarthgap
+    branch: scarthgap-pi-hole-6.0.6
 
   meta-rauc:
     url: https://github.com/rauc/meta-rauc
-    branch: scarthgap
+    commit: a0f4a8b9986954239850b9d4256c003c91e6b931
     path: sources/meta-rauc
 
 local_conf_header:
@@ -43,6 +43,6 @@ local_conf_header:
     PACKAGE_CLASSES = "package_deb"
 
 target:
-  - core-image-minimal
+  - pi-hole-bundle
 
 

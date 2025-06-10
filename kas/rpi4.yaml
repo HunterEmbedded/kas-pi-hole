@@ -3,7 +3,7 @@ header:
   includes:
     - pihole.yaml
 
-machine: raspberrypi4
+machine: raspberrypi4-64
 
 repos:
   meta-raspberrypi:

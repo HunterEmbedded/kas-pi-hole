@@ -17,12 +17,12 @@ sudo apt-get install git python3-pip python3-virtualenv
 ```
 
 ## Build the image
-Download the kas files that define the yocto recipes. Check out the pi-hole 6.0.6 version that is based on Scarthgap version of yocto
+Download the kas files that define the yocto recipes. Check out the pi-hole 6.1.2 version that is based on Scarthgap version of yocto
 
 ```
 git clone https://github.com/HunterEmbedded/kas-pi-hole.git
 cd kas-pi-hole
-git checkout scarthgap-pi-hole-6.0.6
+git checkout scarthgap-pi-hole-6.1.2
 ```
 
 Install virtualenv and call it pi-hole-build
@@ -62,7 +62,7 @@ bitbake pi-hole-bundle
 Use the Raspberry Pi Imager to programme an SD card. 
 
 In the GUI under Operating System chose the "Use custom" option and select the file 
-`build/tmp/deploy/images/raspberrypi4-64/pi-hole-image-6.0.6-raspberrypi4-64.rootfs-<timestamp>.img`
+`build/tmp/deploy/images/raspberrypi4-64/pi-hole-image-6.1.2-raspberrypi4-64.rootfs-<timestamp>.img`
 
 Once programmed and the SD card is inserted in the RPi4 power it on.
 The pi-hole application will start automatically. Use your favourite method to find the IP address it has been allocated on your network.
@@ -83,14 +83,13 @@ If a new RAUC bundle is available it can be installed into rootfs B.
 From a another PC copy the new .raucb file to /data/update on the RPi4. This directory is owned by admin and so is writeable.
 
 ```
-scp build/tmp/deploy/images/raspberrypi4-64/pi-hole-image-6.0.6-raspberrypi4-64-<timestamp>.raucb admin@<RPI4 IP>:/data/update/pi-hole-bundle.raucb
+scp build/tmp/deploy/images/raspberrypi4-64/pi-hole-image-6.1.2-raspberrypi4-64-<timestamp>.raucb admin@<RPI4 IP>:/data/update/pi-hole-bundle.raucb
 ```
 
 Then it can be installed from a shell running on the RPi 4. The install operation will write the contents of the bundle to rootfs B and then the mark-active operation will update the u-boot variables that on the next boot the other partition (ie B) should be used.
 
 ```
 rauc install /data/update/pi-hole-bundle.raucb
-rauc status mark-active other
 sudo rm /data/update/pi-hole-bundle.raucb
 sudo sytemctl reboot
 ```

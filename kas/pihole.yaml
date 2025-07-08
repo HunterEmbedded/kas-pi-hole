@@ -26,7 +26,7 @@ repos:
   meta-hunter-embedded:
     url: https://github.com/HunterEmbedded/meta-hunterembedded.git
     path: sources/meta-hunter-embedded
-    branch: scarthgap-pi-hole-6.0.6
+    branch: scarthgap-pi-hole-6.1.2
 
   meta-rauc:
     url: https://github.com/rauc/meta-rauc

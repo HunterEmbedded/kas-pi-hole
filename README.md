@@ -90,7 +90,6 @@ Then it can be installed from a shell running on the RPi 4. The install operatio
 
 ```
 rauc install /data/update/pi-hole-bundle.raucb
-rauc status mark-active other
 sudo rm /data/update/pi-hole-bundle.raucb
 sudo sytemctl reboot
 ```

@@ -86,11 +86,11 @@ From a another PC copy the new .raucb file to /data/update on the RPi4. This dir
 scp build/tmp/deploy/images/raspberrypi4-64/pi-hole-image-6.1.2-raspberrypi4-64-<timestamp>.raucb admin@<RPI4 IP>:/data/update/pi-hole-bundle.raucb
 ```
 
-Then it can be installed from a shell running on the RPi 4. The install operation will write the contents of the bundle to rootfs B and then the mark-active operation will update the u-boot variables that on the next boot the other partition (ie B) should be used.
+Then it can be installed from a shell running on the RPi 4. The install operation will write the contents of the bundle to rootfs B. Implicit in the install operation is an update of the u-boot variables that on the next boot the other partition (ie B) should be used.
 
 ```
 rauc install /data/update/pi-hole-bundle.raucb
-sudo rm /data/update/pi-hole-bundle.raucb
+rm /data/update/pi-hole-bundle.raucb
 sudo sytemctl reboot
 ```
 
